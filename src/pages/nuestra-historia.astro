@@ -8,17 +8,17 @@ import fotoVales from '../assets/fotovales.png';
 
 <Layout title="Valtia — Nuestra historia">
   <main class="bg-valtia-dark min-h-dvh text-white">
-    <div class="mx-auto flex min-h-dvh max-w-6xl flex-col px-6 py-8 md:px-12 md:py-10">
-      <header class="animate-fade-up flex items-center gap-5 md:gap-8">
+    <div class="mx-auto flex min-h-dvh max-w-7xl flex-col px-6 py-8 md:px-12 md:py-10">
+      <header class="animate-fade-up mt-6 flex items-center gap-5 md:mt-12 md:gap-8">
         <a href="/" aria-label="Volver al inicio" class="shrink-0 text-white">
-          <Logo variant="blanco" class="h-12 w-auto md:h-16" />
+          <Logo variant="blanco" class="h-16 w-auto md:h-24" />
         </a>
-        <h1 class="font-serif text-4xl font-normal md:text-6xl">Nuestra historia</h1>
+        <h1 class="font-sans text-4xl font-normal md:text-7xl">Nuestra historia</h1>
       </header>
 
-      <div class="grid flex-1 content-center items-center gap-12 py-10 md:grid-cols-2 md:gap-16">
+      <div class="grid flex-1 content-center items-center gap-12 py-10 md:grid-cols-[1.3fr_1fr] md:gap-16">
         <div
-          class="animate-fade-up space-y-6 font-mono text-[15px] leading-relaxed md:text-base"
+          class="animate-fade-up font-tenor space-y-6 text-[15px] leading-relaxed md:text-[17px]"
           style="animation-delay: 150ms"
         >
           <p>
@@ -46,10 +46,10 @@ import fotoVales from '../assets/fotovales.png';
         <Image
           src={fotoVales}
           alt="Las fundadoras de Valtia"
-          class="animate-fade-up w-full max-w-md justify-self-center md:justify-self-end"
+          class="animate-fade-up w-full max-w-lg justify-self-center md:justify-self-end"
           style="animation-delay: 300ms"
           widths={[640, 1024, 1553]}
-          sizes="(min-width: 768px) 28rem, 100vw"
+          sizes="(min-width: 768px) 32rem, 100vw"
         />
       </div>
 
