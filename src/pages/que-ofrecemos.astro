@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Logo from '../components/Logo.astro';
+import SectionNav from '../components/SectionNav.astro';
 import compu from '../assets/compu.png';
 import personasTrabajando from '../assets/personastrabajando.png';
 import compuCuanti from '../assets/compucuanti.png';
@@ -66,16 +67,9 @@ const servicios = [
             ))
           }
         </div>
-
-        <div class="animate-fade-up mt-2 text-center md:mt-10" style="animation-delay: 600ms">
-          <a
-            href="/hablemos"
-            class="hover:text-valtia-deep inline-block border border-white/70 px-10 py-3 text-sm tracking-[0.3em] text-white uppercase transition-colors duration-300 hover:bg-white"
-          >
-            Conversemos
-          </a>
-        </div>
       </div>
+
+      <SectionNav variant="light" />
     </div>
   </main>
 </Layout>
