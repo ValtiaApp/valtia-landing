@@ -1,0 +1,54 @@
+---
+// Navegación principal entre vistas.
+// variant: "dark" (texto/borde oscuro, para fondos claros) | "light" (blanco, para fondos oscuros)
+// label: texto opcional sobre los botones (ej. "¿Quieres saber más?")
+const { variant = 'dark', label } = Astro.props;
+
+const links = [
+  { label: 'Nosotras', href: '/nosotras' },
+  { label: '¿Qué buscamos?', href: '/que-buscamos' },
+  { label: '¿Qué ofrecemos?', href: '/que-ofrecemos' },
+  { label: '¡Hablémos!', href: '/hablemos' },
+];
+
+const current = Astro.url.pathname.replace(/\/$/, '');
+
+const styles =
+  variant === 'light'
+    ? {
+        base: 'border-white/70 text-white hover:bg-white hover:text-valtia-dark',
+        active: 'bg-white text-valtia-dark border-white',
+        label: 'text-white',
+      }
+    : {
+        base: 'border-neutral-400 text-neutral-800 hover:bg-neutral-900 hover:text-white hover:border-neutral-900',
+        active: 'bg-neutral-900 text-white border-neutral-900',
+        label: 'text-neutral-800',
+      };
+---
+
+<nav class="animate-fade-up" style="animation-delay: 450ms" aria-label="Secciones">
+  {
+    label && (
+      <p class={`mb-5 font-serif text-sm tracking-[0.2em] uppercase ${styles.label}`}>{label}</p>
+    )
+  }
+  <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    {
+      links.map(({ label: text, href }) => {
+        const isActive = current === href;
+        return (
+          <li>
+            <a
+              href={href}
+              aria-current={isActive ? 'page' : undefined}
+              class={`block border px-4 py-3 text-center font-serif text-sm tracking-[0.15em] uppercase transition-colors duration-300 ${isActive ? styles.active : styles.base}`}
+            >
+              {text}
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav>

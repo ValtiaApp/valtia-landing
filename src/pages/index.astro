@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Logo from '../components/Logo.astro';
+import SectionNav from '../components/SectionNav.astro';
 import fondo from '../assets/fondo1.png';
 ---
 
@@ -22,7 +23,7 @@ import fondo from '../assets/fondo1.png';
         <Logo class="h-14 w-auto md:h-20" />
       </a>
 
-      <div class="flex flex-1 items-center pb-16">
+      <div class="flex flex-1 items-center">
         <div class="animate-fade-up mx-auto max-w-xl text-center md:mx-0 md:ml-[6%]">
           <h1 class="text-5xl leading-tight font-normal text-neutral-900 md:text-7xl">
             Hola!<br />Somos Valtia
@@ -35,6 +36,8 @@ import fondo from '../assets/fondo1.png';
           </a>
         </div>
       </div>
+
+      <SectionNav variant="dark" />
     </div>
   </main>
 </Layout>

@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Logo from '../components/Logo.astro';
+import SectionNav from '../components/SectionNav.astro';
 import fotoVales from '../assets/fotovales.png';
 ---
 
@@ -52,28 +53,7 @@ import fotoVales from '../assets/fotovales.png';
         />
       </div>
 
-      <nav class="animate-fade-up" style="animation-delay: 450ms" aria-label="Secciones">
-        <p class="font-serif text-sm tracking-[0.2em] uppercase">¿Quieres saber más?</p>
-        <ul class="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {
-            [
-              { label: 'Nosotras', href: '/nosotras' },
-              { label: '¿Qué buscamos?', href: '/que-buscamos' },
-              { label: '¿Qué ofrecemos?', href: '/que-ofrecemos' },
-              { label: '¡Hablémos!', href: '/hablemos' },
-            ].map(({ label, href }) => (
-              <li>
-                <a
-                  href={href}
-                  class="block border border-white/70 px-4 py-3 text-center font-serif text-sm tracking-[0.15em] uppercase transition-colors duration-300 hover:bg-white hover:text-valtia-dark"
-                >
-                  {label}
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </nav>
+      <SectionNav variant="light" label="¿Quieres saber más?" />
     </div>
   </main>
 </Layout>
