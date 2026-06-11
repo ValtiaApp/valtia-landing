@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "@fontsource/open-sauce-one/400.css";
+@import "@fontsource/open-sauce-one/500.css";
 
 @theme {
   /* Paleta Valtia */
@@ -7,8 +9,9 @@
   --color-valtia-dark: #1a4b47;
   --color-valtia-deep: #125356;
 
-  /* Tipografías (aproximación al diseño de Canva — ajustar si difieren) */
-  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  /* Tipografías (serif y mono son aproximación al diseño de Canva — ajustar si difieren) */
+  --font-sans: "Open Sauce One", ui-sans-serif, system-ui, sans-serif;
+  --font-tenor: "Tenor Sans", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Lora", ui-serif, Georgia, serif;
   --font-mono: "Courier Prime", ui-monospace, monospace;
 }
