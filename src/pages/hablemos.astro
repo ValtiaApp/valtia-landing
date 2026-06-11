@@ -1,11 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Logo from '../components/Logo.astro';
-import SectionNav from '../components/SectionNav.astro';
 
 const contactos = [
   { titulo: 'Teléfono', detalle: '+569 85960349', href: 'tel:+56985960349' },
-  { titulo: 'Contacto', detalle: 'hola@valtia.cl', href: 'mailto:hola@valtia.cl' },
+  { titulo: 'Contacto', detalle: 'vpina@valtia.cl', href: 'mailto:vpina@valtia.cl' },
   {
     titulo: 'Linkedin',
     detalle: 'linkedin.com/companyvaltia-chile',
@@ -25,20 +24,9 @@ const contactos = [
 
       <div class="flex flex-1 flex-col justify-center gap-12 py-10 md:gap-16">
         <section class="animate-fade-up text-center" style="animation-delay: 150ms">
-          <h1 class="mx-auto max-w-3xl text-4xl leading-snug font-normal text-neutral-900 md:text-5xl">
-            Únete a la waitlist y se parte del lanzamiento
+          <h1 class="mx-auto text-6xl leading-snug font-normal text-neutral-900 md:text-[9.5rem]">
+            ¡Hablemos!
           </h1>
-          {/* TODO: conectar con un servicio de formularios (Formspree/Web3Forms, por definir) */}
-          <form class="mx-auto mt-10 w-full max-w-xl">
-            <label for="waitlist-email" class="sr-only">Correo electrónico</label>
-            <input
-              id="waitlist-email"
-              name="email"
-              type="email"
-              required
-              class="focus:border-valtia-deep w-full border border-neutral-900 px-4 py-3 text-neutral-900 outline-none"
-            />
-          </form>
         </section>
 
         <div class="animate-fade-up grid gap-10 text-center sm:grid-cols-3" style="animation-delay: 300ms">
@@ -47,17 +35,17 @@ const contactos = [
               <div>
                 <a
                   href={href}
-                  class="text-valtia-deep text-lg underline underline-offset-4 transition-opacity hover:opacity-70"
+                  class="text-valtia-deep text-2xl underline underline-offset-4 transition-opacity hover:opacity-70 md:text-3xl"
                 >
                   {titulo}
                 </a>
-                <p class="text-valtia-deep mt-1 text-sm">{detalle}</p>
+                <p class="text-valtia-deep mt-1 text-base md:text-lg">{detalle}</p>
               </div>
             ))
           }
         </div>
 
-        <div class="animate-fade-up text-center" style="animation-delay: 450ms">
+        <div class="animate-fade-up mt-4 text-center md:mt-16" style="animation-delay: 450ms">
           <a
             href="/"
             class="inline-block border border-neutral-400 px-8 py-3 text-xs tracking-[0.25em] text-neutral-800 uppercase transition-colors duration-300 hover:border-neutral-900 hover:bg-neutral-900 hover:text-white"
@@ -66,8 +54,6 @@ const contactos = [
           </a>
         </div>
       </div>
-
-      <SectionNav variant="dark" />
     </div>
   </main>
 </Layout>
