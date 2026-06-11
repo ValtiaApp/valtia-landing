@@ -1,0 +1,84 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import Logo from '../components/Logo.astro';
+import SectionNav from '../components/SectionNav.astro';
+import compu from '../assets/compu.png';
+import personasTrabajando from '../assets/personastrabajando.png';
+import compuCuanti from '../assets/compucuanti.png';
+
+const servicios = [
+  {
+    titulo: 'Desarrollo de propuestas Adhoc',
+    imagen: compu,
+    alt: 'Escritorio con notebook y libreta',
+    descripcion:
+      'Tú nos entregas el brief, nosotras hacemos la propuesta, metodología y muestra listos para presentar a tu cliente.',
+  },
+  {
+    titulo: 'Plataforma de análisis cualitativa',
+    imagen: personasTrabajando,
+    alt: 'Personas trabajando frente a un computador',
+    descripcion:
+      'Analizamos tus entrevistas y focus groups y generamos el reporte listo para que lo revises, le des tu toque y lo envíes directo al cliente.',
+  },
+  {
+    titulo: 'Reportería cuantitativa',
+    imagen: compuCuanti,
+    alt: 'Pantalla con planilla de datos',
+    descripcion:
+      'Tú nos entregas la base de datos, nosotras generamos el reporte con los hallazgos listos para presentar a tu cliente.',
+  },
+];
+---
+
+<Layout title="Valtia — ¿Qué ofrecemos?">
+  <main class="bg-valtia-deep min-h-dvh text-white">
+    <div class="mx-auto flex min-h-dvh max-w-6xl flex-col px-6 py-8 md:px-12 md:py-10">
+      <header class="animate-fade-up flex items-center gap-5 md:gap-8">
+        <a href="/" aria-label="Volver al inicio" class="shrink-0 text-white">
+          <Logo variant="blanco" class="h-12 w-auto md:h-16" />
+        </a>
+        <h1 class="flex-1 text-center font-serif text-4xl font-normal md:pr-16 md:text-5xl">
+          Lo que hacemos
+        </h1>
+      </header>
+
+      <div class="flex flex-1 flex-col justify-center gap-12 py-10">
+        <div class="grid gap-12 md:grid-cols-3 md:gap-8">
+          {
+            servicios.map(({ titulo, imagen, alt, descripcion }, i) => (
+              <article
+                class="animate-fade-up mx-auto flex max-w-xs flex-col items-center text-center"
+                style={`animation-delay: ${150 + i * 150}ms`}
+              >
+                <div class="aspect-[16/10] w-full overflow-hidden rounded-[50%]">
+                  <Image
+                    src={imagen}
+                    alt={alt}
+                    class="h-full w-full object-cover grayscale"
+                    widths={[320, 640]}
+                    sizes="(min-width: 768px) 20rem, 80vw"
+                  />
+                </div>
+                <h2 class="mt-6 font-serif text-xl leading-snug md:text-2xl">{titulo}</h2>
+                <p class="mt-4 text-sm leading-relaxed text-white/85">{descripcion}</p>
+              </article>
+            ))
+          }
+        </div>
+
+        <div class="animate-fade-up text-center" style="animation-delay: 600ms">
+          <a
+            href="/hablemos"
+            class="hover:text-valtia-deep inline-block border border-white/70 px-10 py-3 text-sm tracking-[0.3em] text-white uppercase transition-colors duration-300 hover:bg-white"
+          >
+            Conversemos
+          </a>
+        </div>
+      </div>
+
+      <SectionNav variant="light" />
+    </div>
+  </main>
+</Layout>
