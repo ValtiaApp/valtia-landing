@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Logo from '../components/Logo.astro';
+import SectionNav from '../components/SectionNav.astro';
+---
+
+<Layout title="Valtia — ¿Qué buscamos?">
+  <main class="bg-valtia-green min-h-dvh text-neutral-800">
+    <div class="mx-auto flex min-h-dvh max-w-6xl flex-col px-6 py-8 md:px-12 md:py-10">
+      <header class="animate-fade-up">
+        <a href="/" aria-label="Volver al inicio" class="inline-block text-neutral-900">
+          <Logo class="h-12 w-auto md:h-16" />
+        </a>
+      </header>
+
+      <div class="flex flex-1 items-center justify-center py-10">
+        <div class="animate-fade-up max-w-4xl text-center" style="animation-delay: 150ms">
+          <h1 class="font-serif text-4xl leading-snug font-normal md:text-6xl">
+            <span class="text-neutral-900">Somos el brazo operativo de tu</span><br />
+            <span class="text-neutral-700">empresa de investigación</span>
+          </h1>
+          <p class="mx-auto mt-8 max-w-2xl font-mono text-[15px] leading-relaxed text-neutral-900 md:text-base">
+            automatizamos procesos para que puedas enfocarte en lo que realmente importa:
+            la interpretación, el insight y la creación de valor para tus clientes.
+          </p>
+        </div>
+      </div>
+
+      <SectionNav variant="dark" />
+    </div>
+  </main>
+</Layout>
