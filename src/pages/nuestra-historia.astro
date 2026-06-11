@@ -1,0 +1,79 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import Logo from '../components/Logo.astro';
+import fotoVales from '../assets/fotovales.png';
+---
+
+<Layout title="Valtia — Nuestra historia">
+  <main class="bg-valtia-dark min-h-dvh text-white">
+    <div class="mx-auto flex min-h-dvh max-w-6xl flex-col px-6 py-8 md:px-12 md:py-10">
+      <header class="animate-fade-up flex items-center gap-5 md:gap-8">
+        <a href="/" aria-label="Volver al inicio" class="shrink-0 text-white">
+          <Logo class="h-12 w-auto md:h-16" />
+        </a>
+        <h1 class="font-serif text-4xl font-normal md:text-6xl">Nuestra historia</h1>
+      </header>
+
+      <div class="grid flex-1 content-center items-center gap-12 py-10 md:grid-cols-2 md:gap-16">
+        <div
+          class="animate-fade-up space-y-6 font-mono text-[15px] leading-relaxed md:text-base"
+          style="animation-delay: 150ms"
+        >
+          <p>
+            Corría el 2019 cuando el universo, con muy poco criterio... decidió poner a
+            las Vales en el mismo lugar. Coincidencia o destino, nunca lo sabremos...
+          </p>
+          <p>
+            Lo que sí sabemos es que juntas descubrieron sus superpoderes y la gran dupla
+            que formaban. ¿Nuestro camino? Tres empresas, dos Vales, una misma obsesión:
+            innovar, automatizar y generar valor a la industria.
+          </p>
+          <p>
+            Luego de muchas conversaciones, un día llegó la pregunta ¿y si lo hacemos
+            nosotras?<br />
+            Ese fue el inicio de un gran proyecto.
+          </p>
+          <p>
+            Pero toda buena historia tiene sus personajes detrás de escena. Francisca, con
+            su mente financiera, y Denis, con su dominio tecnológico, son los directores
+            de escena que orquestan para que todo funcione. Sin ellos, el show no existe.
+          </p>
+          <p>Ahora somos cuatro, mejor que dos. Y el show debe continuar.</p>
+        </div>
+
+        <Image
+          src={fotoVales}
+          alt="Las fundadoras de Valtia"
+          class="animate-fade-up w-full max-w-md justify-self-center md:justify-self-end"
+          style="animation-delay: 300ms"
+          widths={[640, 1024, 1553]}
+          sizes="(min-width: 768px) 28rem, 100vw"
+        />
+      </div>
+
+      <nav class="animate-fade-up" style="animation-delay: 450ms" aria-label="Secciones">
+        <p class="font-serif text-sm tracking-[0.2em] uppercase">¿Quieres saber más?</p>
+        <ul class="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {
+            [
+              { label: 'Nosotras', href: '/nosotras' },
+              { label: '¿Qué buscamos?', href: '/que-buscamos' },
+              { label: '¿Qué ofrecemos?', href: '/que-ofrecemos' },
+              { label: '¡Hablémos!', href: '/hablemos' },
+            ].map(({ label, href }) => (
+              <li>
+                <a
+                  href={href}
+                  class="block border border-white/70 px-4 py-3 text-center font-serif text-sm tracking-[0.15em] uppercase transition-colors duration-300 hover:bg-white hover:text-valtia-dark"
+                >
+                  {label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+    </div>
+  </main>
+</Layout>

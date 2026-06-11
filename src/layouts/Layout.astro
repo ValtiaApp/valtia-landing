@@ -1,0 +1,31 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import '../styles/global.css';
+
+const {
+  title = 'Valtia',
+  description = 'Valtia — valor y análisis. Innovar, automatizar y generar valor a la industria.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Lora:wght@400;500&family=Courier+Prime:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <ClientRouter />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

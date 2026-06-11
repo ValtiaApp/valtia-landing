@@ -1,17 +1,40 @@
 ---
-
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import Logo from '../components/Logo.astro';
+import fondo from '../assets/fondo1.png';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Valtia — Hola! Somos Valtia">
+  <main class="relative min-h-dvh overflow-hidden">
+    <Image
+      src={fondo}
+      alt=""
+      class="absolute inset-0 h-full w-full object-cover"
+      loading="eager"
+      fetchpriority="high"
+      widths={[768, 1280, 1920, 2560]}
+      sizes="100vw"
+    />
+
+    <div class="relative z-10 flex min-h-dvh flex-col px-6 py-8 md:px-14 md:py-10">
+      <a href="/" aria-label="Valtia" class="text-neutral-900">
+        <Logo class="h-14 w-auto md:h-20" />
+      </a>
+
+      <div class="flex flex-1 items-center pb-16">
+        <div class="animate-fade-up mx-auto max-w-xl text-center md:mx-0 md:ml-[6%]">
+          <h1 class="text-5xl leading-tight font-normal text-neutral-900 md:text-7xl">
+            Hola!<br />Somos Valtia
+          </h1>
+          <a
+            href="/nuestra-historia"
+            class="mt-10 inline-block border border-neutral-900 px-12 py-3.5 text-sm tracking-[0.3em] text-neutral-900 uppercase transition-colors duration-300 hover:bg-neutral-900 hover:text-white"
+          >
+            Conócenos
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

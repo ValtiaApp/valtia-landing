@@ -1,1 +1,27 @@
 @import "tailwindcss";
+
+@theme {
+  /* Paleta Valtia */
+  --color-valtia-teal: #84c9c2;
+  --color-valtia-dark: #1a4b47;
+
+  /* Tipografías (aproximación al diseño de Canva — ajustar si difieren) */
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Lora", ui-serif, Georgia, serif;
+  --font-mono: "Courier Prime", ui-monospace, monospace;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
