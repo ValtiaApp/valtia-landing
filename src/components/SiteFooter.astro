@@ -1,0 +1,17 @@
+---
+import { Image } from 'astro:assets';
+import logoWord from '../assets/logo-word.png';
+---
+
+<div class="flex h-1.5 w-full">
+  <span class="h-full flex-1 bg-valtia-purple"></span>
+  <span class="h-full flex-1 bg-valtia-yellow"></span>
+  <span class="h-full flex-1 bg-valtia-orange"></span>
+  <span class="h-full flex-1 bg-valtia-pink"></span>
+</div>
+<footer class="bg-valtia-ink py-[22px]">
+  <div class="mx-auto flex max-w-[1140px] flex-wrap items-center justify-between gap-2.5 px-8">
+    <Image src={logoWord} alt="Valtia" class="h-6 w-auto opacity-70" />
+    <p class="text-[13px] font-medium text-white/55">© 2026 Valtia. Todos los derechos reservados.</p>
+  </div>
+</footer>

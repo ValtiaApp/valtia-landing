@@ -1,0 +1,20 @@
+---
+---
+
+<form
+  class="mx-auto flex max-w-[480px] items-center gap-2 rounded-full border border-white/25 bg-white/16 py-2 pr-2 pl-6 max-[820px]:flex-col max-[820px]:items-stretch max-[820px]:gap-3 max-[820px]:rounded-3xl max-[820px]:p-4"
+  onsubmit="event.preventDefault(); this.querySelector('button').textContent='¡Listo! Te avisamos pronto';"
+>
+  <input
+    type="email"
+    placeholder="Tu correo electrónico"
+    required
+    class="min-w-0 flex-1 border-none bg-transparent text-[15px] font-medium text-white outline-none placeholder:text-white/65 max-[820px]:py-1.5 max-[820px]:text-center"
+  />
+  <button
+    type="submit"
+    class="rounded-full bg-white px-[22px] py-3.5 text-[14.5px] font-bold whitespace-nowrap text-valtia-purple transition-transform duration-150 hover:-translate-y-px hover:shadow-lg max-[820px]:w-full"
+  >
+    Únete a la waitlist
+  </button>
+</form>

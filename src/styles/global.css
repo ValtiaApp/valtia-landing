@@ -1,30 +1,16 @@
 @import "tailwindcss";
-@import "@fontsource/open-sauce-one/400.css";
-@import "@fontsource/open-sauce-one/500.css";
 
 @theme {
   /* Paleta Valtia */
-  --color-valtia-teal: #84c9c2;
-  --color-valtia-green: #30b6a3;
-  --color-valtia-dark: #1a4b47;
-  --color-valtia-deep: #125356;
+  --color-valtia-purple: #4f31f5;
+  --color-valtia-purple-dark: #3d22c9;
+  --color-valtia-purple-light: #7b62f8;
+  --color-valtia-yellow: #f5ce33;
+  --color-valtia-orange: #f55d2e;
+  --color-valtia-pink: #f52ea2;
+  --color-valtia-ink: #161221;
+  --color-valtia-gray: #6e6b7a;
+  --color-valtia-soft: #f7f6fc;
 
-  /* Tipografías del diseño: Open Sauce One (hero) y Tenor Sans (resto de vistas) */
-  --font-sans: "Open Sauce One", ui-sans-serif, system-ui, sans-serif;
-  --font-tenor: "Tenor Sans", ui-sans-serif, system-ui, sans-serif;
-}
-
-@keyframes fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@utility animate-fade-up {
-  animation: fade-up 0.7s ease-out both;
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
 }

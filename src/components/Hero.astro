@@ -1,0 +1,42 @@
+---
+import { Image } from 'astro:assets';
+import WaitlistForm from './WaitlistForm.astro';
+import heroMark from '../assets/hero-mark.png';
+---
+
+<section class="relative overflow-hidden bg-valtia-purple pt-14 pb-[130px] text-center">
+  <div
+    class="absolute top-[-220px] right-[-140px] z-[1] h-[420px] w-[420px] rotate-45 rounded-[64px] bg-valtia-purple-light opacity-[0.35]"
+  >
+  </div>
+  <div
+    class="absolute bottom-[-160px] left-[-120px] z-[1] h-[300px] w-[300px] rotate-45 rounded-[52px] bg-valtia-purple-dark opacity-[0.5]"
+  >
+  </div>
+  <div
+    class="absolute top-[60px] left-[6%] z-[1] h-[140px] w-[140px] rotate-45 rounded-[28px] bg-valtia-pink opacity-[0.18]"
+  >
+  </div>
+
+  <div class="relative z-[2] mx-auto max-w-[1140px] px-8">
+    <Image src={heroMark} alt="" class="mx-auto mb-6.5 w-18" loading="eager" fetchpriority="high" />
+    <h1
+      class="mx-auto mb-7 max-w-[820px] text-[60px] leading-[1.08] font-extrabold tracking-[-1px] text-white max-[820px]:text-[36px]"
+    >
+      Hacemos tus estudios de mercado de principio a fin
+    </h1>
+    <p
+      class="mx-auto mb-9 max-w-[560px] text-lg leading-relaxed text-white/88 max-[820px]:text-base"
+    >
+      Somos un equipo de investigadores trabajando en brindar una solución de automatización de
+      procesos para la industria.
+    </p>
+    <div class="mb-9 flex flex-wrap items-center justify-center gap-2.5">
+      <span class="inline-block rounded-full bg-valtia-yellow px-4 py-2 text-sm font-bold text-valtia-ink">
+        Lanzamos nuestra empresa en octubre
+      </span>
+    </div>
+    <p class="mb-5.5 text-base font-semibold text-white/88">¿Quieres ser el primero en enterarte?</p>
+    <WaitlistForm />
+  </div>
+</section>
